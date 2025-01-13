@@ -10,7 +10,7 @@ namespace vsite::oop::v8
 		virtual ~base_exception() = default;
 	};
 
-	class not_number : base_exception {
+	class not_number : public base_exception {
 	public:
 		std::string what() const override { return "not a number"; }
 	};

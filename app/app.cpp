@@ -19,21 +19,22 @@ namespace vsite::oop::v8
 		return n;
 	}
 
-	double calc(int a, char op, int b) {
-		switch (op)
-		{
-		case '+':
-			return a + b;
-		case '-':
-			return a - b;
-		case '*':
-			return a * b;
-		case '/':
-			if (b == 0) {
-				throw divide_zero();
-			}
-			return (double)a / b;
-		}
-
-	}
+    double calc(int a, char op, int b) {
+        switch (op)
+        {
+        case '+':
+            return a + b;
+        case '-':
+            return a - b;
+        case '*':
+            return a * b;
+        case '/':
+            if (b == 0) {
+                throw divide_zero();
+            }
+            return static_cast<double>(a) / b;
+        default:
+            throw not_operator();
+        }
+    }
 }
