@@ -15,12 +15,12 @@ namespace vsite::oop::v8
 		std::string what() const override { return "not a number"; }
 	};
 
-	class divide_zero : base_exception {
+	class divide_zero : public base_exception { // Promijenjeno u public
 	public:
 		std::string what() const override { return "divided by zero"; }
 	};
 
-	class not_operator : base_exception {
+	class not_operator : public base_exception { // Promijenjeno u public
 	public:
 		std::string what() const override { return "invalid operation"; }
 	};

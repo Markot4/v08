@@ -15,6 +15,7 @@ int main()
         }
         catch (const vsite::oop::v8::base_exception& e) {
             std::cerr << "Error: " << e.what() << std::endl;
+            break; // Izlaz iz petlje nakon iznimke
         }
     }
     return 0;
